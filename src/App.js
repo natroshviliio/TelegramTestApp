@@ -19,7 +19,7 @@ function App() {
     return (
       <div className="container p-2">
         <div className='bg-slate-300 py-3 px-3 text-slate-600 text-center rounded-md'>
-          <div className='font-semibold'>Welcome: {tg.initData?.username || 'username'}</div>
+          <div className='font-semibold'>Welcome: {tg.initData?.username || 'username1'}</div>
         </div>
         <div>
           <button className='px-2 py-1 bg-orange-500 text-gray-200' onClick={close}>Close</button>
