@@ -15,16 +15,18 @@ function App() {
     tg.ready();
   }, [])
 
-  return (
-    <div className="container p-2">
-      <div className='bg-slate-300 py-3 px-3 text-slate-600 text-center rounded-md'>
-        <div className='font-semibold'>Welcome: {tg.initDataUnsafe?.user || 'username'}</div>
+  if(!tg.initDataUnsafe.is_bot) {
+    return (
+      <div className="container p-2">
+        <div className='bg-slate-300 py-3 px-3 text-slate-600 text-center rounded-md'>
+          <div className='font-semibold'>Welcome: {tg.initDataUnsafe?.user_name || 'username'}</div>
+        </div>
+        <div>
+          <button className='px-2 py-1 bg-orange-500 text-gray-200' onClick={close}>Close</button>
+        </div>
       </div>
-      <div>
-        <button className='px-2 py-1 bg-orange-500 text-gray-200' onClick={close}>Close</button>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
