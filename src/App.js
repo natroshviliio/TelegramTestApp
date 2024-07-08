@@ -16,9 +16,9 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <div className='bg-slate-500 py-3 px-3 text-slate-200 text-center font-semibold'>
-        My Online Store
+    <div className="container p-2">
+      <div className='bg-slate-300 py-3 px-3 text-slate-600 text-center rounded-md'>
+        <div className='font-semibold'>My Online Store</div>
       </div>
       <div>
         <button className='px-2 py-1 bg-orange-500 text-gray-200' onClick={close}>Close</button>
