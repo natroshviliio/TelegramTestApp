@@ -22,7 +22,6 @@ function App() {
   }
 
   const sendData = () => {
-    // tg.sendData(data)
     tg.MainButton.setParams({
       text: 'Hello'
     });
@@ -30,6 +29,7 @@ function App() {
       tg.MainButton.hide();
     } else {
       tg.MainButton.show();
+      tg.sendData(data)
     }
   }
 
