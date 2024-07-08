@@ -22,7 +22,8 @@ function App() {
   }
 
   const sendData = () => {
-    tg.sendData(data)
+    // tg.sendData(data)
+    tg.mainButton?.show();
   }
 
   useEffect(() => {
