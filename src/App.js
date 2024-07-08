@@ -22,16 +22,18 @@ function App() {
   }
 
   const sendData = () => {
+  }
+
+  useEffect(() => {
     tg.MainButton.setParams({
       text: 'Hello'
     });
-    if(tg.MainButton.isVisible) {
+    if(!data.firstName && !data.lastName) {
       tg.MainButton.hide();
     } else {
       tg.MainButton.show();
-      tg.sendData(data)
     }
-  }
+  }, [data]);
 
   useEffect(() => {
     tg.ready();
