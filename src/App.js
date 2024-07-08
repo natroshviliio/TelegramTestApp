@@ -23,7 +23,14 @@ function App() {
 
   const sendData = () => {
     // tg.sendData(data)
-    tg.mainButton?.show();
+    tg.MainButton.setParams({
+      text: 'Hello'
+    });
+    if(tg.MainButton.isVisible) {
+      tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
+    }
   }
 
   useEffect(() => {
