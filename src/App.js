@@ -17,8 +17,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className='bg-slate-500 py-3 px-3 text-slate-200'>
-Hell
+      <div className='bg-slate-500 py-3 px-3 text-slate-200 text-center font-semibold'>
+        My Online Store
       </div>
       <div>
         <button className='px-2 py-1 bg-orange-500 text-gray-200' onClick={close}>Close</button>

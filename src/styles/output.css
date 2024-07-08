@@ -601,6 +601,14 @@ video {
   padding-right: 0.75rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
