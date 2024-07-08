@@ -35,7 +35,7 @@ function App() {
     tg.MainButton.setParams({
       text: 'Hello'
     });
-    if(!data.firstName && !data.lastName) {
+    if(!data.firstName || !data.lastName) {
       tg.MainButton.hide();
     } else {
       tg.MainButton.show();
