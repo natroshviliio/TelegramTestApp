@@ -26,9 +26,9 @@ function App() {
   }, [])
 
   useEffect(() => {
-    tg.WebApp.onEvent('mainButtonClicked', sendData);
+    tg.WebApp?.onEvent('mainButtonClicked', sendData);
 
-    return () => tg.WebApp.offEvent('mainButtonClicked', sendData);
+    return () => tg.WebApp?.offEvent('mainButtonClicked', sendData);
   }, [])
 
   useEffect(() => {
