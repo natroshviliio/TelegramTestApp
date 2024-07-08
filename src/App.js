@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 
 import "./styles/output.css";
@@ -21,8 +21,15 @@ function App() {
     tg.close();
   }
 
-  const sendData = () => {
-  }
+  const sendData = useCallback(() => {
+    tg.sendData(JSON.stringify(data));
+  }, [])
+
+  useEffect(() => {
+    tg.WebApp.onEvent('mainButtonClicked', sendData);
+
+    return () => tg.WebApp.offEvent('mainButtonClicked', sendData);
+  }, [])
 
   useEffect(() => {
     tg.MainButton.setParams({
